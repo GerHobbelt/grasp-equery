@@ -1,5 +1,5 @@
 name: 'grasp-equery'
-version: '0.4.0'
+version: '0.4.1-3'
 
 author: 'George Zahariev <z@georgezahariev.com>'
 description: 'grasp query using example code with wildcards'
@@ -29,11 +29,12 @@ scripts:
   test: "make test"
 
 dependencies:
-  'flow-parser': '^0.*'
+  'flow-parser': '^0.53.1'
   'prelude-ls': '^1.1.2'
-  'grasp-syntax-javascript': '^0.2.0'
+  'grasp-syntax-javascript': '^0.2.2'
 
 dev-dependencies:
-  livescript: '^1.4.0'
-  mocha: '^2.3.4'
-  istanbul: '^0.4.1'
+  globby: '^6.1.0'
+  istanbul: '^0.4.5'
+  livescript: '^1.5.0'
+  mocha: '^3.5.0'

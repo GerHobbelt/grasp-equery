@@ -15,10 +15,13 @@ package.json: package.json.ls
 lib:
 	mkdir -p lib/
 
-lib/%.js: src/%.ls lib
+update_version:
+	node __patch_version_in_js.js
+
+lib/%.js: src/%.ls lib update_version
 	$(LSC) --compile --output lib "$<"
 
-.PHONY: build test coverage dev-install loc clean
+.PHONY: build test coverage loc clean default all install update_version
 
 all: build
 
@@ -40,3 +43,4 @@ clean:
 	rm -f package.json
 	rm -rf lib
 	rm -rf coverage
+
